@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color swatch preview — ColorfulWallpapers</title>
+<style>body{font-family:system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem;line-height:1.5}
+#swatch{height:200px;border-radius:12px;border:1px solid #ccc;margin:1rem 0}
+input[type=color]{width:4rem;height:2.5rem}a.cta{display:inline-block;margin-top:1rem;background:#2563eb;color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}</style></head>
+<body>
+<h1>Color swatch preview</h1>
+<p>Pick a solid color to preview as a phone wallpaper vibe. Browse the full free library on the site.</p>
+<input id="c" type="color" value="#7dd3fc">
+<div id="swatch"></div>
+<p id="hex"></p>
+<p><a class="cta" href="https://colorfulwallpapers.com/">Open ColorfulWallpapers</a></p>
+<script>
+const c=document.getElementById('c'), s=document.getElementById('swatch'), h=document.getElementById('hex');
+function sync(){s.style.background=c.value; h.textContent=c.value.toUpperCase()}
+c.oninput=sync; sync();
+</script></body></html>
